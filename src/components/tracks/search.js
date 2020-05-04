@@ -18,6 +18,8 @@ export default class Search extends Component {
           type: "SEARCH_TRACKS",
           payload: res.data.message.body.track_list,
         });
+
+        this.setState({ trackTitle: "" });
       })
       .catch((err) => console.log(err));
   };
@@ -55,7 +57,7 @@ export default class Search extends Component {
                   />
                 </div>
                 <div
-                  className="button btn btn-primary btn-lg btn-block mb-5"
+                  className="button btn btn-info btn-lg btn-block mb-5"
                   type="Submit"
                 >
                   Get Track Lyrics
